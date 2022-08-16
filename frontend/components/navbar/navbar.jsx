@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -29,7 +30,10 @@ class Navbar extends React.Component {
     return (
       <div id='navbar'>
         <section id='center'>
-            <Link to='/'>AllHill LOGO</Link>
+          <Link to='/'>
+            <img src={window.logo} width="82px" height="82px" className='logo'/>
+            <span className="nav-title">AllHills</span>
+          </Link>
         </section>
         <section id='right-nav'>
           {this.userNav()}
