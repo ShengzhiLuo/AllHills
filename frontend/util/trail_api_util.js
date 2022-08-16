@@ -12,3 +12,6 @@ export const fetchTrail = (trailId) => (
         data: {trailId}
     })
 );
+
+
+

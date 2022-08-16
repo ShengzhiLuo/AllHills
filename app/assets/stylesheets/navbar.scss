@@ -1,11 +1,12 @@
 #navbar {
-    height: 60px;
+    height: 80px;
     background-color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     position: relative;
     min-width: 800px;
+    text-decoration: none;
   }
 
 #navbar a {
@@ -20,7 +21,70 @@
 }
 
 .nav-title {
-    font-size: 20px;
-    font-weight: 600;
-    
+  font-size: 50px;
+  font-weight: 800;
+  margin: 0px 0px 0px 20px;
+  color: #6b8e23;
+  letter-spacing: 1.5px;
+ 
 }
+
+.navbar-title {
+  text-decoration: none;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  margin: 0px 0px 0px 20px;
+}
+
+
+#sign-up-button {
+  background: #6b8e23;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 999;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 2px solid silver;
+  border-radius: 8px;
+  width: 82px;
+  text-decoration: none;
+}
+
+#log-in-button {
+  margin: 0px 0px 0px 8px;
+  background: white;
+  color: #6b8e23;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 999;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 2px solid silver;
+  border-radius: 8px;
+  width: 82px;
+  text-decoration: none;
+}
+
+#signup-link {
+  text-decoration: none;
+}
+
+#login-link {
+  text-decoration: none;
+}
+
+
+
+// #navbar {
+//   // background-image: url("https://funtrails-seeds.s3.amazonaws.com/splash_hiker4-min.jpg");
+//   background-size: cover;
+//   background-color: white;
+// }

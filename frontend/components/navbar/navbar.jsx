@@ -17,10 +17,10 @@ class Navbar extends React.Component {
       </div>
     ) : (
       <div id='right-navlinks'>
-        <Link to='/signup'>
+        <Link to='/signup' id = 'signup-link'>
           <button id='sign-up-button'>Sign Up</button>
         </Link >
-        <Link to='/login'>
+        <Link to='/login' id = 'login-link'>
           <button id='log-in-button'>Log In</button>
         </Link>
       </div >
@@ -30,8 +30,8 @@ class Navbar extends React.Component {
     return (
       <div id='navbar'>
         <section id='center'>
-          <Link to='/'>
-            <img src={window.logo} width="82px" height="82px" className='logo'/>
+          <Link to='/' className="navbar-title">
+            <img src={window.mountain} width="82px" height="82px" className='logo'/>
             <span className="nav-title">AllHills</span>
           </Link>
         </section>
