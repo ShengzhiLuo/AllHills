@@ -1,5 +1,6 @@
 import React from "react";
 import { SocialIcon } from 'react-social-icons';
+import { MDBIcon } from 'mdb-react-ui-kit';
 
 const Footer = () => {
   return (
@@ -56,6 +57,9 @@ const Footer = () => {
                       </div>
                       <div className='favicons'>
                           <SocialIcon url="https://www.instagram.com/" target='_blank' bgColor="#414141" />
+                      </div>
+                      <div className='favicons'>
+                          <MDBIcon icon = 'angellist' size="2x"/>
                     </div>
                </div>
             </div>

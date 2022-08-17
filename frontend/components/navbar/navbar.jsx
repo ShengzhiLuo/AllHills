@@ -29,8 +29,13 @@ class Navbar extends React.Component {
   render(){
     return (
       <div id='navbar'>
-        <section id ='left-nav'>
-            <Link to ='/' className="left-navbar">explore</Link>
+        <section id='left-nav'>
+          <div className='left-navlinks'>
+            <Link to='/' className="left-navbar">Explore</Link>
+            <Link to='/' className="left-navbar2">Community</Link>
+            <Link to='/' className="left-navbar3">Saved</Link>
+            <Link to='/' className="left-navbar4">Shop</Link>
+          </div>
         </section>
         <section id='center'>
           <Link to='/' className="navbar-title">

@@ -29,6 +29,9 @@ class LoginForm extends React.Component {
            username: 'demo',
            password: 'password'
        });
+   }
+   componentWillUnmount() {
+    this.props.clearErrors()
   }
 
   renderErrors() {

@@ -14,7 +14,7 @@ class Splash extends React.Component {
         this.setState({ currImg: nextImg });
     }
     componentDidMount() {
-        this.interval = setInterval(() => this.handleImage(), 2000);
+        this.interval = setInterval(() => this.handleImage(), 4000);
     }
 
     render() {

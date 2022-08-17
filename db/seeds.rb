@@ -17,3 +17,5 @@ u4 = User.create(username: 'Hugh Grant', email: 'maurice@allhill.com', password:
 u5 = User.create(username: 'Shengzhi', email: 'shengzhi@allhill.com', password: 'password')
 
 
+Trail.destroy_all
+#Glacier National Park

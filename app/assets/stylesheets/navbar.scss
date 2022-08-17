@@ -12,8 +12,8 @@
 
 #navbar a {
     display: inline-block;
-    font-size: 20px;
-    font-weight: 600;
+    // font-size: 20px;
+    // font-weight: 600;
   }
   
 #center {
@@ -36,6 +36,7 @@
 
 .navbar-title {
   text-decoration: none;
+  margin-right: 50px;
 }
 
 .logo {
@@ -103,23 +104,25 @@
   font-size: 20px;
 }
 
-.left-navbar {
+.left-navbar, .left-navbar2, .left-navbar3, .left-navbar4 {
   color: #6b8e23;
   cursor: pointer;
-  font-size: 12px;
-  font-weight: 700;
-  // height: 36px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  // border: 2px solid silver;
-  // border-radius: 8px;
-  width: 200px;
   text-decoration: none;
   margin-left: 15px;
   margin-top: 9px;
 }
 
+.left-navbar:hover, .left-navbar2:hover, .left-navbar3:hover, .left-navbar4:hover {
+  border-bottom: 2px solid grey;
+}
+
+#left-navlinks {
+    font-size: 5px;
+    font-weight: 100;
+}
 
 
 
