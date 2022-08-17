@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 class SignupForm extends React.Component {
   constructor(props) {
@@ -27,7 +28,7 @@ class SignupForm extends React.Component {
     return(
       <ul>
         {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
+          <li key={`error-${i}`} id = 'error'>
             {error}
           </li>
         ))}
@@ -40,39 +41,34 @@ class SignupForm extends React.Component {
       <div className="signup-form-container">
         <form onSubmit={this.handleSubmit} className="signup-form-box">
           <br />
-          Create your free account
-          
-          
+          <p id="signup-info">Create your free account</p>
+          <br/>
           <div className="signup-form">
-            <br/>
-            <label>Username:
               <input type="text"
                 value={this.state.username}
                 onChange={this.update('username')}
                 className="signup-input"
+                placeholder='Username'
               />
-            </label>
-            <br />
-            <label>Email:
               <input
                 type="text"
                 value={this.state.email}
                 onChange={this.update('email')}
                 className="signup-input"
+                placeholder='Email Address'
               />
-            </label>
-            <br/>
-            <label>Password:
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
                 className="signup-input"
+                placeholder='Password'
               />
-            </label>
-            <br />
             {this.renderErrors()}
             <input className="session-submit" type="submit" value={this.props.formType} />
-            <p>Already have an account? {this.props.navLink}</p>
+            <br/>
+            <div id = 'signup-bottom'>
+            <p>Already have an account? <Link to="/login" className='navlink-signup'>Log In Here</Link> </p>
+            </div>
           </div>
         </form>
       </div>

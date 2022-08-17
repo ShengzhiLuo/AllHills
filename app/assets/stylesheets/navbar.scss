@@ -1,5 +1,5 @@
 #navbar {
-    height: 80px;
+    height: 50px;
     background-color: white;
     display: flex;
     flex-direction: row;
@@ -7,6 +7,7 @@
     position: relative;
     min-width: 800px;
     text-decoration: none;
+    margin-top: 10px;
   }
 
 #navbar a {
@@ -20,10 +21,14 @@
     text-align: center;
 }
 
+#center img{
+   margin-top: 0px;
+}
+
 .nav-title {
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 800;
-  margin: 0px 0px 0px 20px;
+  margin: 0px 0px 0px 10px;
   color: #6b8e23;
   letter-spacing: 1.5px;
  
@@ -35,10 +40,9 @@
 
 .logo {
   width: 50px;
-  height: 50px;
-  margin: 0px 0px 0px 20px;
+  height: auto;
+  margin: 10px 0px 0px 5px;
 }
-
 
 #sign-up-button {
   background: #6b8e23;
@@ -57,7 +61,7 @@
 }
 
 #log-in-button {
-  margin: 0px 0px 0px 8px;
+  margin: 0px 15px 0px 15px;
   background: white;
   color: #6b8e23;
   cursor: pointer;
@@ -80,6 +84,43 @@
 #login-link {
   text-decoration: none;
 }
+
+#log-out {
+  background-color: #6b8e23;
+  color: white;
+  border: 2px solid silver;
+  border-radius: 8px;
+  padding: 10px;
+  width: 82px;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+#user-name {
+  display: inline-block;
+  padding-right: 10px;
+  font-family: Arial;
+  font-size: 20px;
+}
+
+.left-navbar {
+  color: #6b8e23;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  // height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // border: 2px solid silver;
+  // border-radius: 8px;
+  width: 200px;
+  text-decoration: none;
+  margin-left: 15px;
+  margin-top: 9px;
+}
+
+
 
 
 

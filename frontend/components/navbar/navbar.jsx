@@ -12,7 +12,7 @@ class Navbar extends React.Component {
     return(
     (this.props.currentUser ? (
       <div id='user-nav'>
-        <div id='user-name'>Hello, {this.props.currentUser.username}</div>
+        <div id='user-name'>Hello, {this.props.currentUser.username}! </div>
         <button id='log-out' onClick={this.props.logout}>Log Out</button>
       </div>
     ) : (
@@ -29,6 +29,9 @@ class Navbar extends React.Component {
   render(){
     return (
       <div id='navbar'>
+        <section id ='left-nav'>
+            <Link to ='/' className="left-navbar">explore</Link>
+        </section>
         <section id='center'>
           <Link to='/' className="navbar-title">
             <img src={window.mountain} width="82px" height="82px" className='logo'/>

@@ -35,7 +35,7 @@ class LoginForm extends React.Component {
     return(
       <ul>
         {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
+          <li key={`error-${i}`} id ='error'>
             {error}
           </li>
         ))}
@@ -45,32 +45,30 @@ class LoginForm extends React.Component {
 
   render() {
     return (
+      <div className='login-backgroud'>
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          <p id = "login-info" >Log in and let's get going</p>
-          <br/>
-          <div className="login-form">
+            <p id="login-info" >Log in and let's get going</p>
             <br/>
-            <label>Username:
+          <div className="login-form">
               <input type="text"
                 value={this.state.username}
                 onChange={this.update('username')}
-                className="login-input"
+                  className="login-input"
+                  placeholder='Username'
               />
-            </label>
             <br />
-            <label>Password:
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
-                className="login-input"
+                  className="login-input"
+                  placeholder='Password'
               />
-            </label>
-            <br />
             {this.renderErrors()}
-            <input className="session-submit" type="submit" value={this.props.formType} />
-            <div>
-                <p>Don't have an account? {this.props.navLink} </p>  
+              <input className="session-submit" type="submit" value={this.props.formType} />
+              <br/>
+            <div id = 'login-bottom'>
+                <p>Don't have an account?<Link to="/signup" className='navlink-login'> Sign Up Here</Link> </p>
 
                 <p>or</p>
 
@@ -80,6 +78,7 @@ class LoginForm extends React.Component {
             </div>
         </div>
       </form>
+      </div>
       </div>
     );
   }
