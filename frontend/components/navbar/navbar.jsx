@@ -5,14 +5,30 @@ import { Link } from 'react-router-dom';
 class Navbar extends React.Component {
   constructor(props) {
     super(props)
+    this.state = {
+      curTime: ""
+    }
     this.userNav = this.userNav.bind(this)
+  }
+  componentDidMount() {
+    this.getTime();
+  }
+
+  getTime = () => {
+    let today = new Date(),
+      curTime = today.getHours();
+        // + ':' + today.getMinutes() + ':' + today.getSeconds();
+    this.setState({ curTime });
   }
 
   userNav(){
     return(
     (this.props.currentUser ? (
       <div id='user-nav'>
-        <div id='user-name'>Hello, {this.props.currentUser.username}! </div>
+          <div id='user-name'>
+            {this.state.curTime < 12 ? "Good Morning" : ""}
+            {this.state.curTime >= 12 && this.state.curTime < 17? "Good Afternoon" : ""}
+            {this.state.curTime >= 17 && this.state.curTime < 24 ? "Good Evening" : ""}, {this.props.currentUser.username}! </div>
         <button id='log-out' onClick={this.props.logout}>Log Out</button>
       </div>
     ) : (
@@ -31,7 +47,7 @@ class Navbar extends React.Component {
       <div id='navbar'>
         <section id='left-nav'>
           <div className='left-navlinks'>
-            <Link to='/' className="left-navbar">Explore</Link>
+            <Link to='/explore' className="left-navbar">Explore</Link>
             <Link to='/' className="left-navbar2">Community</Link>
             <Link to='/' className="left-navbar3">Saved</Link>
             <Link to='/' className="left-navbar4">Shop</Link>

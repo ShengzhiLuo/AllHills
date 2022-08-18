@@ -1,0 +1,116 @@
+// Place all the styles related to the api/trails controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#trails {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    align-content: space-around;
+    justify-content: center;
+    min-width: 1080px;
+  }
+  
+  #bg>#trails {
+    display: block;
+    margin: 0 auto;
+    width: 800px;
+  }
+  
+  #trails .gridrow {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #trail-module {
+    flex: 0 1 auto;
+    flex-shrink: 0;
+    width: 250px;
+    height: 200px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    // box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2);
+  }
+
+  #trail-module > div {
+    width: 250px;
+    height: 100px;
+    overflow: hidden;
+  }
+  
+ .trail-photo {
+    width: 255px;
+    height: auto;
+    object-fit: cover;
+    transform: translateY(-20%);
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  #trail-window {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+  }
+  
+  #trail-window>p {
+    width: 240px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  
+  #trail-window p {
+    font-size: 14px;
+    color: #767676;
+  }
+
+  #lower-info {
+    justify-content:space-between;
+    align-content: space-between;
+    flex-direction: row;
+  }
+
+  #lower-info div {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 14px;
+    color: #767676;
+    flex-direction: row;
+  }
+  
+  #trail-stats h1 {
+    font-weight: 600;
+    font-size: 17px;
+    width: 240px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  
+  .difficulty {
+    color: white;
+    font-size: 12px;
+    font-weight: 350;
+    border-radius: 8px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding: 4px;
+    display: block;
+    width: 70px;
+    text-align: center;
+  }
+  
+  .difficulty#Easy {
+    background-color: #629730;
+  }
+  
+  .difficulty#Hard {
+    background-color: #414141;
+  }
+  .difficulty#Moderate {
+    background-color:  #4B98D3;
+  }
