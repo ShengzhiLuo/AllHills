@@ -5,8 +5,9 @@ import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Footer from './splash/footer';
-import Splash from './splash/splash';
+import SplashContainer from './splash/splash_container';
 import ExploreContainer from './explore/explore_container';
+import TrailOneContainer from "./trails/trail_one_container";
 
 const App = () => (
     <div>
@@ -16,9 +17,10 @@ const App = () => (
         <Switch>
             <AuthRoute exact path="/login" component={LogInFormContainer} />
             <AuthRoute exact path="/signup" component={SignUpFormContainer} />
+            <Route path='/trails/:trailId' component={TrailOneContainer}/>
             <Route path='/explore' component={ExploreContainer} />
             <Route path='/trails' component={ExploreContainer} />
-            <Route path='/' component={Splash} />
+            <Route path='/' component={SplashContainer} />
         </Switch>
         <footer>
             <Footer/>

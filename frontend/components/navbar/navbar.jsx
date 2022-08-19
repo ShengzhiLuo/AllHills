@@ -25,10 +25,6 @@ class Navbar extends React.Component {
     return(
     (this.props.currentUser ? (
       <div id='user-nav'>
-          <div id='user-name'>
-            {this.state.curTime < 12 ? "Good Morning" : ""}
-            {this.state.curTime >= 12 && this.state.curTime < 17? "Good Afternoon" : ""}
-            {this.state.curTime >= 17 && this.state.curTime < 24 ? "Good Evening" : ""}, {this.props.currentUser.username}! </div>
         <button id='log-out' onClick={this.props.logout}>Log Out</button>
       </div>
     ) : (

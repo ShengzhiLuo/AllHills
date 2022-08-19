@@ -1,66 +1,25 @@
 import React from "react";
 import { SocialIcon } from 'react-social-icons';
 import { MDBIcon } from 'mdb-react-ui-kit';
+import { FaLinkedin, FaGithub, FaAngellist } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    // <footer>
-    //   <div className='footer-container'>
-    //     <div className='favicons'>
-    //       <SocialIcon url="https://www.linkedin.com/in/shengzhi-luo/" target='_blank' bgColor="#414141" />
-    //     </div>
-    //     <div className='favicons'>
-    //       <SocialIcon url="https://github.com/ShengzhiLuo" target='_blank' bgColor="#414141" />
-    //     </div>
-    //   </div>
-    //   </footer>
-      
-<div className='footer'>
-        <div className='footer-title'>
-            <img src={window.logotitle} width="500px" height="500px" className='logo' />
-        </div>
-
-        <div className='footer-sections'>
-            <div className='footer-explore'>
-                <ul>
-                    <li>Explore</li>
-                    <li></li>
-                    <li>Trails</li>
-                </ul>
-            </div>
-            <div className='footer-community'>
-                <ul className='flex-center'>
-                    {/* <img className='prof-pic' src={window.profile_photo} height="140px" width="140px"/> */}
-                    {/* <li>Community</li>
-                    <li>Support</li>
-                    <li>Members</li>
-                    <li>Give Pro</li>
-                    <li>AllTrails Gear</li> */}
-                </ul>
-            </div>
-        </div>
-
-        <div className='footer-icons'>
+      <div className='footer'>
+          <div className='footer-icons'>
                 <div className='foot-left'>
                     <p>An app for the outdoors</p>
                     <img src={window.app_store} width="105px" height="35px" />
                     <img src={window.google_store} width="118px" height="34px" />
                 </div>
                 <div className="foot-right">
-                  <p>Connect with Shengzhi</p>
+                  <p>Connect with Shengzhi Luo</p>
+                  <p>罗圣之</p>
                 <div className='footer-container'>
-                        <div className='favicons'>
-                        <SocialIcon url="https://www.linkedin.com/in/shengzhi-luo/" target='_blank' bgColor="#414141" />
-                         </div>
-                        <div className='favicons'>
-                          <SocialIcon url="https://github.com/ShengzhiLuo" target='_blank' bgColor="#414141" />
-                      </div>
-                      <div className='favicons'>
-                          <SocialIcon url="https://www.instagram.com/" target='_blank' bgColor="#414141" />
-                      </div>
-                      <div className='favicons'>
-                          <MDBIcon icon = 'angellist' size="2x"/>
-                    </div>
+                      <a href= 'https://www.linkedin.com/in/shengzhi-luo/'><FaLinkedin style={{ color: '#6b8e23',fontSize: "50px"}} /></a>
+                      <a href= 'https://github.com/ShengzhiLuo'><FaGithub style={{ color: '#6b8e23' ,fontSize: "50px"}} /></a>
+                      <a href= 'https://angel.co/u/shengzhi-luo'><FaAngellist style={{ color: '#6b8e23' ,fontSize: "50px"}} /></a>
                </div>
             </div>
         </div>

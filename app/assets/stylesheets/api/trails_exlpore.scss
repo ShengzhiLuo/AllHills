@@ -21,6 +21,12 @@
     flex-direction: row;
   }
 
+  #trail-module-link {
+    text-decoration: none;
+    color: black;
+  }
+
+
   #trail-module {
     flex: 0 1 auto;
     flex-shrink: 0;
@@ -30,7 +36,7 @@
     margin: 10px;
     border-radius: 10px;
     overflow: hidden;
-    // box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2);
   }
 
   #trail-module > div {
@@ -49,11 +55,18 @@
   .hidden {
     display: none;
   }
-
+  
   #trail-window {
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 5px;
+    text-decoration: none;
+  }
+
+  #trail-name {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: sans-serif;
   }
   
   #trail-window>p {
@@ -68,10 +81,18 @@
     color: #767676;
   }
 
-  #lower-info {
-    justify-content:space-between;
-    align-content: space-between;
+
+  #flex {
+    display: flex;
     flex-direction: row;
+    justify-content: flex-start;
+    // align-items: left;
+  }
+
+  #lower-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
   }
 
   #lower-info div {
@@ -114,3 +135,4 @@
   .difficulty#Moderate {
     background-color:  #4B98D3;
   }
+

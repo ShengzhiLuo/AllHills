@@ -1,3 +1,3 @@
 json.array! @trails do |trail|
-    json.extract! trail, :id, :name, :difficulty_level, :length, :latitude, :longitude
+    json.extract! trail, :id, :name, :description, :difficulty_level, :length, :elevation_gain, :route_type, :latitude, :longitude, :park_id, :estimated_time, :country, :city
 end
