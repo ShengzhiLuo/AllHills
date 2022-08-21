@@ -13,6 +13,7 @@ const App = () => (
     <div>
         <header>
             <NavbarContainer />
+            
         </header>
         <Switch>
             <AuthRoute exact path="/login" component={LogInFormContainer} />
