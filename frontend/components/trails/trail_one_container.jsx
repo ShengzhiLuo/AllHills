@@ -5,8 +5,9 @@ import { withRouter } from 'react-router';
 
 
 const mSTP = (state, ownProps) => ({
-    trailId: parseInt(ownProps.match.params.trailId),
-    trail: state.entities.trails[ownProps.match.params.trailId],
+  trailId: parseInt(ownProps.match.params.trailId),
+  trail: state.entities.trails[ownProps.match.params.trailId],
+  // trail: state.entities.trails[ownProps.match.params.id],
     // currentUser: state.session.currentUser,
     // reviews: Object.values(state.entities.reviews)
   })

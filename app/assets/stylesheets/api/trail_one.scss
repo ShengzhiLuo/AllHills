@@ -1,0 +1,190 @@
+#trail-bg {
+    background-color: #F2F2F2;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+  }
+  
+  #trail-page-container {
+    width: 800px;
+    margin: 0 auto;
+    display: block;
+    background-color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0px 2px 0 rgba(0, 0, 0, .2);
+    overflow: hidden;
+  }
+  
+  .galaxy #trail-page-container {
+    background-color: #1b1b1b;
+    color: white;
+    box-shadow: 0 0px 4px 0 rgba(112, 112, 112, 0.6);
+  }
+  
+  #image-cntr {
+    width: 800px;
+    height:200px;
+    overflow: hidden;
+  }
+  
+  #image-cntr img {
+    width: 800px;
+    height: auto;
+    object-fit: cover;
+    overflow: hidden;
+    transform: translateY(-30%);
+    position: relative;
+    
+  }
+  
+  .galaxy #trail-page-container p {
+    color: white
+  }
+  
+  #trail-page-container header {
+    height: 200px;
+    background-color: #233812;
+    color: white;
+  }
+  
+  #gradient {
+    position: relative;
+    transform: translateY(-100%);
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5));
+    height: 200px;
+  }
+  
+  #top-info {
+    transform: translateY(80%);
+    padding: 20px;
+    position: relative;
+  }
+  
+  #top-info h1 {
+    font-weight: 600;
+    font-size: 17px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  
+  #top-info h2 {
+    margin-top: 5px;
+    font-size: 12px;
+  }
+  
+  #top-info a {
+    color: white;
+  }
+  
+  #divider {
+    height: 40px;
+    background-color: #55882C;
+  }
+  
+  #page-split {
+    display: flex;
+  }
+  
+  #left-page {
+    flex: 2.5;
+    border-right: 1px solid #e7e7e7;
+  }
+  
+  .galaxy #left-page {
+    flex: 2.5;
+    border-right: 1px solid #2b2b2b;
+  }
+  
+  #right-page {
+    margin-top: 20px;
+    flex: 1;
+  }
+  
+  #text-block {
+    margin: 20px;
+    font-size: 14px;
+    color: #767676;
+    line-height: 1.4;
+  }
+  
+  #trail-overview #text-block {
+    border-bottom: 1px solid #e7e7e7;
+    border-spacing: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .galaxy #trail-overview #text-block {
+    border-bottom: 1px solid #2b2b2b;
+  }
+  
+  #trail-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: flex-start;
+    width: 70%;
+    padding-left: 20px;
+  }
+  
+  #trail-info div {
+    font-size: 10px;
+    color: #767676
+  }
+  
+  #trail-info p {
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+  }
+  
+  // #description {
+  // }
+  
+  #description #divider {
+    margin-top: 20px;
+    background-color: #F2F2F2;
+  }
+  
+  .galaxy #description #divider {
+    margin-top: 20px;
+    background-color: rgb(78, 78, 78);
+    color: white
+  }
+  
+  #divider p {
+    color: #55882C;
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 20px;
+    padding-top: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #55882C;
+  }
+  
+  .galaxy #divider p {
+    border-bottom: 1px solid white;
+  }
+  
+  #desc-header {
+    width: 72px;
+  }
+  
+  #bottom {
+    height: 100px;
+  }
+  
+  #reviews-header {
+    width: 55px;
+  }
+  
+  // #reviews {
+  //   width: 300px;
+  // }
+  
+  #map-container {
+    margin: 0 auto;
+    width: 90%;
+    height: 200px;
+    border-radius: 10px;
+  }

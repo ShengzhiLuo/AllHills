@@ -1,5 +1,6 @@
 import React from 'react';
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
+import TrailFavorites from './trail_favorites';
 
 
 class Splash extends React.Component {
@@ -19,6 +20,7 @@ class Splash extends React.Component {
     componentDidMount() {
         this.interval = setInterval(() => this.handleImage(), 6000);
         this.getTime();
+        this.props.fetchTrails();
     };
     getTime = () => {
         let today = new Date(),
@@ -40,6 +42,7 @@ class Splash extends React.Component {
 
     render() {
         return (
+            <div>
             <div id='splash-bg'>
                 <img className={this.state.currImg === 1 ? "background-image" : "background-image hidden"} src={window.splash1} />
                 <img className={this.state.currImg === 2 ? "background-image" : "background-image hidden"} src={window.splash2} />
@@ -65,7 +68,12 @@ class Splash extends React.Component {
                         </form>
                     </div>
                 </div>
+                </div>
+                <div>
+                    {this.props.trails.length > 0 && <TrailFavorites trails={this.props.trails } />}
+                </div>
             </div>
+
         )
     }
 

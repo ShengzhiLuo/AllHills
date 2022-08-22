@@ -2,13 +2,23 @@ import { connect } from 'react-redux';
 
 import Splash from './splash';
 
-const mapStateToProps = ({ session, entities: { users } }) => {
+import { fetchAllTrails } from "../../actions/trail_actions";
+
+const mapStateToProps = (state) => {
   return {
-    currentUser: users[session.id]
+    currentUser: state.entities.users[state.session.id],
+    trails: Object.values(state.entities.trails),
   };
 };
 
+const mapDispatchToProps = dispatch => ({
+  fetchTrails: () => dispatch(fetchAllTrails()),
+  // fetchParks: () => dispatch(fetchParks())
+});
+
+
+
 export default connect(
   mapStateToProps,
-  null
+  mapDispatchToProps
 )(Splash);
