@@ -1,27 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import MapContanier from '../maps/map_container'
+import TrailMap from '../maps/map'
 
 
 class TarilOne extends React.Component {
     constructor(props) {
-        super(props);
+      super(props);
     }
 
     componentDidMount() {
-        this.props.fetchTrail(this.props.match.params.trailId)
+      this.props.fetchTrail(this.props.match.params.trailId).then(trail => { console.log(trail) })
         // this.props.fetchTrail(this.props.trail);
     }
-    componentDidUpdate(prevProps) {
-        if (prevProps.match.params.id !== this.props.match.params.id) {
-            const coords = [this.props.trail.latitude, this.props.trail.longitude];
-            console.log("fetching weather on update");
-            console.log(this.props.trail);
-            console.log(this.props.trail.latitude);
-            console.log(this.props.trail.longitude);
-            // this.props.fetchWeather(coords);
-        }
-    }
+    // componentDidUpdate(prevProps) {
+    //     if (prevProps.match.params.id !== this.props.match.params.id) {
+    //         const coords = [this.props.trail.latitude, this.props.trail.longitude];
+    //         console.log("fetching weather on update");
+    //         console.log(this.props.trail);
+    //         console.log(this.props.trail.latitude);
+    //         console.log(this.props.trail.longitude);
+    //         // this.props.fetchWeather(coords);
+    //     }
+    // }
 
 
   render() {
@@ -31,7 +31,7 @@ class TarilOne extends React.Component {
       <div id='trail-page-container'>
         <header>
           <div id='image-cntr'>
-            {/* <img src={trail ? trail.mainPhotoUrl : ""} alt="" /> */}
+            <img src={trail? trail.photoUrl : ""} alt="" />
           </div>
           <div id='gradient'>
             <div id='top-info'>
@@ -81,7 +81,7 @@ class TarilOne extends React.Component {
           </section>
           <section id='right-page'>
             <div >
-                    <MapContanier/>
+                    <TrailMap trail={trail} fetchTrail={this.props.fetchTrail} trailId={ this.props.trailId} />
             </div>
             <div id='nearby'>
             </div>
