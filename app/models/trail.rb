@@ -22,5 +22,8 @@ class Trail < ApplicationRecord
     validates :name, :description, :difficulty_level, :length, :elevation_gain, :route_type, :park_id, :estimated_time, :city, :country, presence: true
     validates :difficulty_level, inclusion: {in: ['Easy', 'Moderate', 'Hard']}
     validates :route_type, inclusion: {in: ['Out & Back', 'Loop', 'Point-to-Point']}
+
+    has_one_attached :photo
     
 end
+

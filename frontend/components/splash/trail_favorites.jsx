@@ -1,5 +1,6 @@
 import React from "react";
 import TrailModule from "../trails/trail_module";
+import { BsFillArrowRightCircleFill, BsFillArrowLeftCircleFill } from "react-icons/bs";
 
 class TrailFavorites extends React.Component {
     constructor(props) {
@@ -28,10 +29,11 @@ class TrailFavorites extends React.Component {
                         <h1>Trail Favorites</h1>
                     </div>
                     <div className="tiles-container">
+                        <button onClick={this.handleSlide} className="arrow-button-left"><BsFillArrowLeftCircleFill style={{ fontSize: "40px" }} /></button>
                         {paneShown.map((trail, i) => {
                             return <TrailModule key={trail ? trail.id : i} trail={trail ? trail : ""} type='trail' />
                         })}
-                        <button onClick={this.handleSlide} className="arrow-button-right"><img src={window.right_arrow} className="arrow" width="22px" height="22px" /></button>
+                        <button onClick={this.handleSlide} className="arrow-button-right"><BsFillArrowRightCircleFill style={{fontSize: "40px"} } /></button>
                     </div>
                 </div>
             </div>

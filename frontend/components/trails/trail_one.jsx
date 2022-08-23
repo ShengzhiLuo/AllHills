@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import MapContanier from '../maps/map_container'
 
 
 class TarilOne extends React.Component {
@@ -23,7 +24,7 @@ class TarilOne extends React.Component {
     }
 
 
-    render() {
+  render() {
         const { trail } = this.props;
         return (
             <div id='bg'>
@@ -79,8 +80,8 @@ class TarilOne extends React.Component {
             <div id='bottom'></div>
           </section>
           <section id='right-page'>
-            <div id='map'>
-              {/* {trail ? (<TrailMap lat={trail.lat} lng={trail.lng} token={window.mapboxToken} key={trail.lat} />) : ('')} */}
+            <div >
+                    <MapContanier/>
             </div>
             <div id='nearby'>
             </div>
