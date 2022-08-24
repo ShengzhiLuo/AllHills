@@ -9,7 +9,7 @@
     margin: 0 auto;
     display: block;
     background-color: white;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 20px;
     box-shadow: 0 0px 2px 0 rgba(0, 0, 0, .2);
     overflow: hidden;
@@ -168,13 +168,29 @@
   // }
   
   #map{
-    margin: 0 auto;
+    margin-bottom: 20px;
     width: 90%;
     height: 300px;
     border-radius: 10px;
+    margin-left: 15px;
   }
 
   #map {
     position: relative;
     overflow: visible;
+  }
+
+  .nearby-trail {
+    font-weight: bold;
+    font-size: 18px;
+    font-family: sans-serif;
+    padding-top: 10px;
+    text-align:center;
+    padding-bottom: 10px;
+    border-top: 1px solid #e7e7e7;
+    border-spacing: 20px;
+  }
+
+  #nearby {
+   padding-left: 10px;
   }

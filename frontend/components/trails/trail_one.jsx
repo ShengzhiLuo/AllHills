@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import TrailMap from '../maps/map'
+import TrailMap from '../maps/map';
+import TrailModule from './trail_module';
+import TrailHeader from '../header/header';
 
 
 class TarilOne extends React.Component {
@@ -9,7 +11,8 @@ class TarilOne extends React.Component {
     }
 
     componentDidMount() {
-      this.props.fetchTrail(this.props.match.params.trailId).then(trail => { console.log(trail) })
+      this.props.fetchTrail(this.props.match.params.trailId).then(trail => { console.log(trail) });
+      this.props.fetchAllTrails();
         // this.props.fetchTrail(this.props.trail);
     }
     // componentDidUpdate(prevProps) {
@@ -25,9 +28,10 @@ class TarilOne extends React.Component {
 
 
   render() {
-        const { trail } = this.props;
+    const { trail, trails } = this.props;
         return (
-            <div id='bg'>
+    <div id='trail-bg'>
+            <TrailHeader trail={trail? trail : ''} className ='trail-header'/>
       <div id='trail-page-container'>
         <header>
           <div id='image-cntr'>
@@ -80,10 +84,12 @@ class TarilOne extends React.Component {
             <div id='bottom'></div>
           </section>
           <section id='right-page'>
-            <div >
+            <div id ='trail-map'>
                     <TrailMap trail={trail} fetchTrail={this.props.fetchTrail} trailId={ this.props.trailId} />
             </div>
+                  <h3 className='nearby-trail'>Nearby Trails</h3>
             <div id='nearby'>
+                {trails.map((trail, i) => (trail.park_id === this.props.trail.park_id && trail.id !== this.props.trail.id) ? <TrailModule trail={trail} key={i} /> : '')}
             </div>
           </section>
         </div>
