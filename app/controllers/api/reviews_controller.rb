@@ -27,11 +27,6 @@ class Api::ReviewsController < ApplicationController
         end
     end
 
-    def show
-        @review = selected_review
-        render :show
-    end
-
     def index
         @reviews = Review.where(trail_id: params[:trail_id])
         render :index

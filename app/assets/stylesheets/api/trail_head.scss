@@ -21,6 +21,7 @@
     width: 640px;
     overflow-x: hidden;
     text-overflow: ellipsis;
+    align-items: center;
     span {
         display: inline-block;
         white-space: nowrap;
@@ -31,8 +32,10 @@
 }
 
 .mini-search{
-    border: 1px solid #cccccc;
+    border: 1px solid #d4d2d2;
     border-radius: 5px;
-    height: 20px;
-    width: 150px
+    height: 30px;
+    width: 30%;
 }
+
+

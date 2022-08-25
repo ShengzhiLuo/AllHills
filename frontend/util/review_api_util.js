@@ -1,39 +1,29 @@
 export const createReview = (review) => (
     $.ajax({
-        url: `/api/trails/${review.trail.id}/reviews`,
+        url: `/api/reviews`,
         method: 'POST',
         data: {review}
     })
 )
 
-export const fetchReviews = (trailId) => (
+export const fetchReviewsByTrail = (trailId) => (
     $.ajax({
         url: `/api/trails/${trailId}/reviews`,
-        method: 'GET',
-        data: {trailId}
+        method: 'GET'
     })
 )
 
-
-export const fetchReview = (reviewId) => (
-    $.ajax({
-        url: `/api/trails/:trailId/reviews/${reviewId}`,
-        method: 'GET',
-        data: {reviewId}
-    })
-)
 
 export const deleteReview = (reviewId) => (
     $.ajax({
-        url: `/api/trails/:trailId/reviews/${reviewId}`,
-        method: 'DELETE',
-        data: {reviewId}
+        url: `/api/reviews/${reviewId}`,
+        method: 'DELETE'
     })
 )
 
 export const updateReview = (review) => (
     $.ajax({
-        url: `api/trails/${review.trailId}/reviews/${review.id}`,
+        url: `api/reviews/${review.id}`,
         method: 'PATCH',
         data: {review}
     })

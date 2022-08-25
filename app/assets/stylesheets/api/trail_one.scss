@@ -59,7 +59,7 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     padding-bottom: 5px;
   }
   
@@ -103,9 +103,8 @@
     border-bottom: 1px solid #e7e7e7;
     border-spacing: 20px;
     padding-bottom: 20px;
-    font-size: 15px;
-    font-family: sans-serif;
-    font-weight: bold;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
   }
   
 
@@ -120,14 +119,27 @@
   }
   
   #trail-info div {
-    font-size: 10px;
-    color: #767676
+    font-size: 12px;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.42;
+    letter-spacing: normal;
+    color: #5a5a5a;
+    display: block;
+    width: auto;
   }
   
   #trail-info p {
-    font-size: 14px;
-    font-weight: 600;
-    color: black;
+    font-size: 16px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+    display: block;
+    width: auto;
+    color: #414141;
   }
   
   // #description {

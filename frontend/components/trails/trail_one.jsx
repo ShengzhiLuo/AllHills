@@ -3,35 +3,41 @@ import { Link } from 'react-router-dom';
 import TrailMap from '../maps/map';
 import TrailModule from './trail_module';
 import TrailHeader from '../header/header';
+import ReviewModule from '../reviews/review_module';
+import ReviewIndexContainer from '../reviews/review_index_container'
+import { deleteReview } from '../../util/review_api_util';
 
 
 class TarilOne extends React.Component {
     constructor(props) {
       super(props);
+      this.state = {
+        reviews: this.props.reviews
+      }
     }
 
-    componentDidMount() {
-      this.props.fetchTrail(this.props.match.params.trailId).then(trail => { console.log(trail) });
+  componentDidMount() {
+      this.props.fetchTrail(this.props.match.params.trailId)
+        .then((trailId) => (this.props.fetchReviewsByTrail(trailId)));
       this.props.fetchAllTrails();
-        // this.props.fetchTrail(this.props.trail);
+  }
+  
+  componentDidUpdate(prevProps) {
+    if (prevProps.match.params.traiId !== this.props.match.params.traiId) {
+      this.props.fetchTrail(this.props.match.params.trailId)
+        .then(() => (this.props.fetchReviewsByTrail(this.props.match.params.trailId)));
+      }
     }
-    // componentDidUpdate(prevProps) {
-    //     if (prevProps.match.params.id !== this.props.match.params.id) {
-    //         const coords = [this.props.trail.latitude, this.props.trail.longitude];
-    //         console.log("fetching weather on update");
-    //         console.log(this.props.trail);
-    //         console.log(this.props.trail.latitude);
-    //         console.log(this.props.trail.longitude);
-    //         // this.props.fetchWeather(coords);
-    //     }
-    // }
 
+//  componentWillUnmount() {
+//    this.props.fetchReviewsByTrail();
+// }
 
   render() {
-    const { trail, trails } = this.props;
+    const { trail, trails, reviews } = this.props;
         return (
     <div id='trail-bg'>
-            <TrailHeader trail={trail? trail : ''} className ='trail-header'/>
+            <TrailHeader trail={trail ? trail :""} className ='trail-header'/>
       <div id='trail-page-container'>
         <header>
           <div id='image-cntr'>
@@ -75,11 +81,16 @@ class TarilOne extends React.Component {
               <div id='divider'><p id='reviews-header'>Reviews</p></div>
             </div>
             <div id='reviews'>
-              {/* {reviewAverage(this.props.reviews, 'Page')} */}
-              {this.props.currentUser ? 
-                <Link to={`/trails/${trail ? trail.id : 0}/reviews`}><button id='rev-button'>Write review</button></Link> : 
-                <Link to={`/login`}><button className='login-btn' id='rev-button'>Log in to write a review</button></Link> }
-              {/* {this.reviews()} */}
+                    {this.props.currentUser ?
+                      <button id='rev-button'>Write review</button>:
+                      <Link to={`/login`}><button className='login-btn' id='rev-button'>Log in to write a review</button></Link>}
+                    {/* <ReviewIndex reviews ={trail ? this.props.reviews : ''} fetchReviewsByTrail={this.props.fetchReviewsByTrail} trailId={this.props.trailId } /> */}
+                    {reviews.map((review, i) => <ReviewModule
+                      // review={review.trail_id === this.props.trailId ? review : {}}
+                      review={review}
+                      deleteReview={this.props.deleteReview} currentUser={this.props.currentUser}
+                      key={i} trail={trail} />)}
+                    {/* <ReviewModule reviews={ trail.reviews? trail.reviews: []} key = {trail.id}  deleteReview={this.props.deleteReview} trail={trail}/> */}
             </div>
             <div id='bottom'></div>
           </section>
@@ -88,8 +99,9 @@ class TarilOne extends React.Component {
                     <TrailMap trail={trail} fetchTrail={this.props.fetchTrail} trailId={ this.props.trailId} />
             </div>
                   <h3 className='nearby-trail'>Nearby Trails</h3>
-            <div id='nearby'>
-                {trails.map((trail, i) => (trail.park_id === this.props.trail.park_id && trail.id !== this.props.trail.id) ? <TrailModule trail={trail} key={i} /> : '')}
+                  <div id='nearby'>
+                  {/* trail.park_id === this.props.trail.park_id &&  */}
+                {trails.map((trail, i) => (( trail.park_id === this.props.trail.park_id && trail.id !== this.props.trail.id) ? <TrailModule trail={trail} key={i} /> : ''))}
             </div>
           </section>
         </div>

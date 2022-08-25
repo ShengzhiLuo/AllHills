@@ -29,7 +29,8 @@ class TrailMap extends React.Component{
         })
     };
 
-    render() {
+    render()
+    {
         return (
             <div ref={ map => this.mapNode = map } id='map'></div> 
         )

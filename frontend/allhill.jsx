@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import configureStore from './store/store';
-import Root from './components/root'
+import Root from './components/root';
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
@@ -15,6 +15,5 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   const store = configureStore(preloadedState);
   // const store = createStore();
-
   ReactDOM.render(<Root store={store} />, root);
 })

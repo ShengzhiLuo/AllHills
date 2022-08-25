@@ -122,3 +122,87 @@ t19.photo.attach(io:pht19, filename: 't19.png')
 
 pht20 = URI.open(purl("t20.png"))
 t20.photo.attach(io:pht20, filename: 't20.png')
+
+
+
+Review.destroy_all
+
+t1r1 = Review.create!(trail_date: "2021-11-29", rating: 5, user_id: u1.id, trail_id: t1.id, description: 'lots of people on hike up. many steps to tower. Welch trail was more tranquil with a lot of rock/bouldering along the way. make sure to follow the marked trail on the way down. there are many unmarked trails.')
+
+t2r1 = Review.create!(trail_date: "2021-11-29", rating: 5, user_id: u2.id, trail_id: t2.id, description: 'lots of people on hike up. many steps to tower. Welch trail was more tranquil with a lot of rock/bouldering along the way. make sure to follow the marked trail on the way down. there are many unmarked trails.')
+
+t3r1 = Review.create!(trail_date: "2021-11-29", rating: 5, user_id: u3.id, trail_id: t3.id, description: 'lots of people on hike up. many steps to tower. Welch trail was more tranquil with a lot of rock/bouldering along the way. make sure to follow the marked trail on the way down. there are many unmarked trails.')
+
+t4r1 = Review.create!(trail_date: "2021-11-29", rating: 5, user_id: u4.id, trail_id: t4.id, description: 'lots of people on hike up. many steps to tower. Welch trail was more tranquil with a lot of rock/bouldering along the way. make sure to follow the marked trail on the way down. there are many unmarked trails.')
+
+t5r1 = Review.create!(trail_date: "2021-11-29", rating: 5, user_id: u5.id, trail_id: t5.id, description: 'lots of people on hike up. many steps to tower. Welch trail was more tranquil with a lot of rock/bouldering along the way. make sure to follow the marked trail on the way down. there are many unmarked trails.')
+
+t6r1 = Review.create!(trail_date: "2021-11-29", rating: 5, user_id: demo.id, trail_id: t6.id, description: 'lots of people on hike up. many steps to tower. Welch trail was more tranquil with a lot of rock/bouldering along the way. make sure to follow the marked trail on the way down. there are many unmarked trails.')
+
+t7r1 = Review.create!(trail_date: "2021-11-29", rating: 5, user_id: u1.id, trail_id: t7.id, description: 'lots of people on hike up. many steps to tower. Welch trail was more tranquil with a lot of rock/bouldering along the way. make sure to follow the marked trail on the way down. there are many unmarked trails.')
+
+t8r1 = Review.create!(trail_date: "2021-11-29", rating: 5, user_id: u2.id, trail_id: t8.id, description: 'lots of people on hike up. many steps to tower. Welch trail was more tranquil with a lot of rock/bouldering along the way. make sure to follow the marked trail on the way down. there are many unmarked trails.')
+
+t9r1 = Review.create!(trail_date: "2021-11-29", rating: 5, user_id: u3.id, trail_id: t9.id, description: 'lots of people on hike up. many steps to tower. Welch trail was more tranquil with a lot of rock/bouldering along the way. make sure to follow the marked trail on the way down. there are many unmarked trails.')
+
+t10r1 = Review.create!(trail_date: "2021-11-29", rating: 5, user_id: u4.id, trail_id: t10.id, description: 'lots of people on hike up. many steps to tower. Welch trail was more tranquil with a lot of rock/bouldering along the way. make sure to follow the marked trail on the way down. there are many unmarked trails.')
+
+t11r1 = Review.create!(trail_date: "2021-11-29", rating: 5, user_id: u5.id, trail_id: t11.id, description: 'lots of people on hike up. many steps to tower. Welch trail was more tranquil with a lot of rock/bouldering along the way. make sure to follow the marked trail on the way down. there are many unmarked trails.')
+
+t12r1 = Review.create!(trail_date: "2021-11-29", rating: 5, user_id: demo.id, trail_id: t12.id, description: 'lots of people on hike up. many steps to tower. Welch trail was more tranquil with a lot of rock/bouldering along the way. make sure to follow the marked trail on the way down. there are many unmarked trails.')
+
+t13r1 = Review.create!(trail_date: "2021-11-29", rating: 5, user_id: u1.id, trail_id: t13.id, description: 'lots of people on hike up. many steps to tower. Welch trail was more tranquil with a lot of rock/bouldering along the way. make sure to follow the marked trail on the way down. there are many unmarked trails.')
+
+t14r1 = Review.create!(trail_date: "2021-11-29", rating: 5, user_id: u2.id, trail_id: t14.id, description: 'lots of people on hike up. many steps to tower. Welch trail was more tranquil with a lot of rock/bouldering along the way. make sure to follow the marked trail on the way down. there are many unmarked trails.')
+
+t15r1 = Review.create!(trail_date: "2021-11-29", rating: 5, user_id: u3.id, trail_id: t15.id, description: 'lots of people on hike up. many steps to tower. Welch trail was more tranquil with a lot of rock/bouldering along the way. make sure to follow the marked trail on the way down. there are many unmarked trails.')
+
+t16r1 = Review.create!(trail_date: "2021-11-29", rating: 5, user_id: u4.id, trail_id: t16.id, description: 'lots of people on hike up. many steps to tower. Welch trail was more tranquil with a lot of rock/bouldering along the way. make sure to follow the marked trail on the way down. there are many unmarked trails.')
+
+t17r1 = Review.create!(trail_date: "2021-11-29", rating: 5, user_id: u5.id, trail_id: t17.id, description: 'lots of people on hike up. many steps to tower. Welch trail was more tranquil with a lot of rock/bouldering along the way. make sure to follow the marked trail on the way down. there are many unmarked trails.')
+
+t18r1 = Review.create!(trail_date: "2021-11-29", rating: 5, user_id: demo.id, trail_id: t18.id, description: 'lots of people on hike up. many steps to tower. Welch trail was more tranquil with a lot of rock/bouldering along the way. make sure to follow the marked trail on the way down. there are many unmarked trails.')
+
+t19r1 = Review.create!(trail_date: "2021-11-29", rating: 5, user_id: u1.id, trail_id: t19.id, description: 'lots of people on hike up. many steps to tower. Welch trail was more tranquil with a lot of rock/bouldering along the way. make sure to follow the marked trail on the way down. there are many unmarked trails.')
+
+t20r1 = Review.create!(trail_date: "2021-11-29", rating: 5, user_id: u2.id, trail_id: t20.id, description: 'lots of people on hike up. many steps to tower. Welch trail was more tranquil with a lot of rock/bouldering along the way. make sure to follow the marked trail on the way down. there are many unmarked trails.')
+
+t1r2 = Review.create!(trail_date: "2020-10-20", rating: 4, user_id: u3.id, trail_id: t1.id, description: 'worth it, awesome value.')
+
+t2r2 = Review.create!(trail_date: "2020-10-20", rating: 4, user_id: u4.id, trail_id: t2.id, description: 'worth it, awesome value.')
+
+t3r2 = Review.create!(trail_date: "2020-10-20", rating: 4, user_id: u5.id, trail_id: t3.id, description: 'worth it, awesome value.')
+
+t4r2 = Review.create!(trail_date: "2020-10-20", rating: 4, user_id: demo.id, trail_id: t4.id, description: 'worth it, awesome value.')
+
+t5r2 = Review.create!(trail_date: "2020-10-20", rating: 4, user_id: u1.id, trail_id: t5.id, description: 'worth it, awesome value.')
+
+t6r2 = Review.create!(trail_date: "2020-10-20", rating: 4, user_id: u2.id, trail_id: t6.id, description: 'worth it, awesome value.')
+
+t7r2 = Review.create!(trail_date: "2020-10-20", rating: 4, user_id: u3.id, trail_id: t7.id, description: 'worth it, awesome value.')
+
+t8r2 = Review.create!(trail_date: "2020-10-20", rating: 4, user_id: u4.id, trail_id: t8.id, description: 'worth it, awesome value.')
+
+t9r2 = Review.create!(trail_date: "2020-10-20", rating: 4, user_id: u5.id, trail_id: t9.id, description: 'worth it, awesome value.')
+
+t10r2 = Review.create!(trail_date: "2020-10-20", rating: 4, user_id: demo.id, trail_id: t10.id, description: 'worth it, awesome value.')
+
+t11r2 = Review.create!(trail_date: "2020-10-20", rating: 4, user_id: u1.id, trail_id: t11.id, description: 'worth it, awesome value.')
+
+t12r2 = Review.create!(trail_date: "2020-10-20", rating: 4, user_id: u2.id, trail_id: t12.id, description: 'worth it, awesome value.')
+
+t13r2 = Review.create!(trail_date: "2020-10-20", rating: 4, user_id: u3.id, trail_id: t13.id, description: 'worth it, awesome value.')
+
+t14r2 = Review.create!(trail_date: "2020-10-20", rating: 4, user_id: u4.id, trail_id: t14.id, description: 'worth it, awesome value.')
+
+t15r2 = Review.create!(trail_date: "2020-10-20", rating: 4, user_id: u5.id, trail_id: t15.id, description: 'worth it, awesome value.')
+
+t16r2 = Review.create!(trail_date: "2020-10-20", rating: 4, user_id: demo.id, trail_id: t16.id, description: 'worth it, awesome value.')
+
+t17r2 = Review.create!(trail_date: "2020-10-20", rating: 4, user_id: u1.id, trail_id: t17.id, description: 'worth it, awesome value.')
+
+t18r2 = Review.create!(trail_date: "2020-10-20", rating: 4, user_id: u2.id, trail_id: t18.id, description: 'worth it, awesome value.')
+
+t19r2 = Review.create!(trail_date: "2020-10-20", rating: 4, user_id: u3.id, trail_id: t19.id, description: 'worth it, awesome value.')
+
+t20r2 = Review.create!(trail_date: "2020-10-20", rating: 4, user_id: u4.id, trail_id: t20.id, description: 'worth it, awesome value.')
