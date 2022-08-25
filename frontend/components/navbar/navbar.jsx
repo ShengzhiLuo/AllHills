@@ -51,7 +51,7 @@ class Navbar extends React.Component {
         </section>
         <section id='center'>
           <Link to='/' className="navbar-title">
-            <img src={window.mountain} width="82px" height="82px" className='logo'/>
+            {/* <img src={window.mountain} width="82px" height="82px" className='logo'/> */}
             <span className="nav-title">AllHills</span>
           </Link>
         </section>
