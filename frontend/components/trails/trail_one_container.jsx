@@ -2,7 +2,8 @@ import TrailOne from './trail_one';
 import { connect } from "react-redux";
 import { fetchTrail, fetchAllTrails} from "../../actions/trail_actions";
 import { withRouter } from 'react-router';
-import {fetchReviewsByTrail} from '../../actions/review_actions'
+import { fetchReviewsByTrail, deleteReview } from '../../actions/review_actions';
+import { openModal } from "../../actions/modal_actions";
 
 
 const mSTP = (state, ownProps) => ({
@@ -11,7 +12,8 @@ const mSTP = (state, ownProps) => ({
   trails: Object.values(state.entities.trails),
   // reviews: state.entities.trails[ownProps.match.params.trailId].reviews
   // trail: state.entities.trails[ownProps.match.params.id],
-  currentUser: state.session.currentUser,
+  // currentUser: state.session.currentUser,
+  currentUser: state.entities.users[state.session.id],
     reviews: Object.values(state.entities.reviews).filter(review => review.trail_id === parseInt(ownProps.match.params.trailId))
   })
   
@@ -20,7 +22,8 @@ const mSTP = (state, ownProps) => ({
     fetchAllTrails: () => dispatch(fetchAllTrails()),
     fetchUser: (userId) => dispatch(fetchUser(userId)),
     deleteReview: (reviewId) => dispatch(deleteReview(reviewId)),
-    fetchReviewsByTrail: () => dispatch(fetchReviewsByTrail(ownProps.match.params.trailId))
+    fetchReviewsByTrail: () => dispatch(fetchReviewsByTrail(ownProps.match.params.trailId)),
+    openModal : formType => dispatch(openModal(formType))
 
     // fetchReviewsByTrail: (trailId) => dispatch(fetchReviewsByTrail(trailId))
 

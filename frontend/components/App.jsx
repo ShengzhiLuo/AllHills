@@ -8,12 +8,13 @@ import Footer from './splash/footer';
 import SplashContainer from './splash/splash_container';
 import ExploreContainer from './explore/explore_container';
 import TrailOneContainer from "./trails/trail_one_container";
+import Modal from "./modal/modal";
 
 const App = () => (
     <div>
+        <Modal/>
         <header>
             <NavbarContainer />
-            
         </header>
         <Switch>
             <AuthRoute exact path="/login" component={LogInFormContainer} />

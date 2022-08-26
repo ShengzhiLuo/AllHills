@@ -6,6 +6,8 @@ import TrailHeader from '../header/header';
 import ReviewModule from '../reviews/review_module';
 import ReviewIndexContainer from '../reviews/review_index_container'
 import { deleteReview } from '../../util/review_api_util';
+import reviewAverage from '../reviews/avg_review';
+
 
 
 class TarilOne extends React.Component {
@@ -80,16 +82,22 @@ class TarilOne extends React.Component {
             <div id='description'>
               <div id='divider'><p id='reviews-header'>Reviews</p></div>
             </div>
-            <div id='reviews'>
+                  <div id = 'parent'>
+                    {reviewAverage(reviews, 'Page')}
+                    <div id = ''>
                     {this.props.currentUser ?
-                      <button id='rev-button'>Write review</button>:
-                      <Link to={`/login`}><button className='login-btn' id='rev-button'>Log in to write a review</button></Link>}
+                      <button id='rev-button' onClick={() => this.props.openModal({formType: 'create'})}>Write review</button>:
+                        <Link to={`/login`} id="rev-link"><button id='rev-button'>Log In</button></Link>}
+                    </div>
+                  </div>
+                  <div id='reviews'>
                     {/* <ReviewIndex reviews ={trail ? this.props.reviews : ''} fetchReviewsByTrail={this.props.fetchReviewsByTrail} trailId={this.props.trailId } /> */}
                     {reviews.map((review, i) => <ReviewModule
                       // review={review.trail_id === this.props.trailId ? review : {}}
                       review={review}
                       deleteReview={this.props.deleteReview} currentUser={this.props.currentUser}
-                      key={i} trail={trail} />)}
+                      key={i} trail={trail}
+                      openModal={this.props.openModal} />)}
                     {/* <ReviewModule reviews={ trail.reviews? trail.reviews: []} key = {trail.id}  deleteReview={this.props.deleteReview} trail={trail}/> */}
             </div>
             <div id='bottom'></div>
@@ -101,7 +109,7 @@ class TarilOne extends React.Component {
                   <h3 className='nearby-trail'>Nearby Trails</h3>
                   <div id='nearby'>
                   {/* trail.park_id === this.props.trail.park_id &&  */}
-                {trails.map((trail, i) => (( trail.park_id === this.props.trail.park_id && trail.id !== this.props.trail.id) ? <TrailModule trail={trail} key={i} /> : ''))}
+                    {trails.map((trail, i) => ((trail.park_id === this.props.trail.park_id && trail.id !== this.props.trail.id) ? <TrailModule trail={trail} key={i} currentUser={ this.props.currentUser} /> : ''))}
             </div>
           </section>
         </div>

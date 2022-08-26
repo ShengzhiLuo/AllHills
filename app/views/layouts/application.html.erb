@@ -9,11 +9,11 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['MAPS_API_KEY']}" %>
-    <!-- <%= favicon_link_tag 'mountain-icon.svg' %> -->
+    <%= favicon_link_tag 'mountain-icon.svg' %> 
 
     <script type="text/javascript">
     window.logo = "<%= image_url('allhills_logo.png') %>";
-    //window.mountain = "<%= image_url('mountain-icon.svg') %>";
+    window.mountain = "<%= image_url('mountain-icon.svg') %>";
     window.app_store = "<%= image_url('app_store.png') %>";
     window.google_store = "<%= image_url('google_store.png') %>";
     window.logotitle = "<%= image_url('logotitle1.png') %>";

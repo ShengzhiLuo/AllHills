@@ -55,14 +55,14 @@
   }
   
   #dlt-btn {
-    background-color: #D75B32;
+    background-color: #6b8e23;
     color: white;
     font-size: 10px;
     font-weight: 600;
   }
   
   #edit-btn {
-    background-color: #6d6d6d;
+    background-color: #6b8e23;
   }
 
 
@@ -72,18 +72,71 @@
   
   #rev-button {
     position: relative;
-    left: 300px;
-    top: 25px;
+    left: 200%;
+    top: 30px;
     background-color: #55882C;
     color: white;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 600;
-    border-radius: 5px;
+    border-radius: 20px;
     padding: 10px;
     margin-right: 10px;
     width: 150px;
     border: 0px solid white;
+    display: flex;
+    justify-content: center;
+  }
+  // #rev-button {
+  //   position: relative;
+  //   left: 300px;
+  //   top: 25px;
+  //   background-color: #55882C;
+  //   color: white;
+  //   font-size: 12px;
+  //   font-weight: 600;
+  //   border-radius: 5px;
+  //   padding: 10px;
+  //   margin-right: 10px;
+  //   width: 150px;
+  //   border: 0px solid white;
+  //   display: flex;
+  //   justify-content: center;
+  // }
+
+  #parent {
+    display:flex;
+    flex-direction: row;
+    border-bottom: 1px solid #dbdbdb;
   }
   
+
+  #rev-link {
+    text-decoration: none;
+  }
+  
+  #avg-rating {
+    color: #464646;
+    margin: 20px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+  }
+
+
+
+  #no-reviews {
+    margin-left: 20px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    font-size: 18px;
+  }
+  
+  #avg-rating p {
+    font-size: 45px;
+  }
+  
+  #avg-rating h2 {
+    font-size: 18px;
+    margin-right: 20px;
+  }
   
   

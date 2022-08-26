@@ -8,13 +8,25 @@ import {FaStar} from 'react-icons/fa'
 
 
 
-const ReviewModule = ({ review, deleteReview, currentUser}) => {
+const ReviewModule = ({ review, deleteReview, currentUser, openModal}) => {
+
+    let stars = [];
+   for(let i=0; i< review.rating; i++){
+    stars.push(<FaStar key={i} size={20} color={'gold'} />)
+    };
+
+    while (stars.length < 5) {
+    let i = stars.length
+    stars.push(<FaStar key={i} size={20} color={'#e9e9e9'} />)
+    };
+
     return (
+
         <div id={`review-module`}>
         <section id='review-stats'>
           <h2>{review.user.username}</h2>
           <div id='subheader'>
-            <div id='rating'>{review.rating}</div>
+            <div id='rating'>{stars}</div>
             <p id='actdate'>{review.trail_date}</p>
           </div>
         </section>
@@ -23,9 +35,9 @@ const ReviewModule = ({ review, deleteReview, currentUser}) => {
         </section>
         <section id='mod-delete'>
         {(currentUser && currentUser.id === review.user_id) ? 
-          <button id ='edit-btn'>edit</button> : ""}
-        {(currentUser && currentUser.id === review.author_id) ? 
-        <button id='dlt-btn' onClick={() => deleteReview(review.id)}>Delete</button> : ""}
+          <button id ='edit-btn' onClick={() => openModal({formType: 'edit'})}>Edit</button> : ""}
+        {(currentUser && currentUser.id === review.user_id) ? 
+            <button id='dlt-btn' onClick={()=> deleteReview(review.id)}>Delete</button> : ""}
         </section>
       </div>
     )
