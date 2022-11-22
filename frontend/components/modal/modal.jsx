@@ -11,7 +11,7 @@ function Modal ({ modal, closeModal }) {
 
     let component;
 
-    switch(modal.formType) {
+    switch(modal.type) {
         case 'create':
             component = <CreateRevContainer />
             break;
@@ -22,9 +22,11 @@ function Modal ({ modal, closeModal }) {
     }
 
     return (
-        <div>
-            {component}
+        <div className="modal-background" onClick={closeModal}>
+        <div className="modal-child">
+          { component }
         </div>
+      </div>
     )
 }
 

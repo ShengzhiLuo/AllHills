@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactStars from "react-rating-stars-component";
 import { MdClose } from 'react-icons/md';
+import { FaStar } from 'react-icons/fa';
 
 class ReviewForm extends React.Component {
     constructor(props) {
@@ -27,7 +28,7 @@ class ReviewForm extends React.Component {
             this.setState(newState);
         }
 
-        this.fetchTrail(this.props.trailId);
+        this.props.fetchTrail(this.props.trailId);
     }
 
     handleDate(e) {
@@ -86,53 +87,51 @@ class ReviewForm extends React.Component {
     }
 
     render() {
-        debugger
         const activities = ['Backpacking', 'Bird watching', 'Bike touring', 'Camping', 'Cross-country skiing', 'Fishing', 'Hiking', 'Horseback riding', 'Mountain biking', 'OVH/Off-road driving', 'Paddle sports', 'Road biking', 'Rock climbing', 'Scenic driving', 'Snowshoeing', 'Skiing', 'Running', 'Via ferrata', 'Walking'] 
         const conditions = ['Great!', 'Blowdown', 'Bridge out', 'Bugs', 'Closed', 'Fee', 'Flooded', 'Icy', 'Muddy',  'No shade', 'Off trail', 'Overgrown', 'Private property', 'Rocky', 'Scramble', 'Washed out', 'Snow']
         let hover = 0;
         const { rating, trail_date } = this.state.review;
-
         const reviewStep = (this.state.step === 1) ?
             <div className="step-container">
                 <div className="x-out">
                     <a onClick={this.closeModal}><MdClose style={{fontSize: "30px"}}/></a>
                 </div>
                 <div className="step-body">
-                    <h1 className="bold overflow">{this.state.trail.name}</h1>
+                    <h1 className="bold overflow">{this.state.trail?.name}</h1>
                     <span className="step">Step 1 of 2</span>
                     <div className='stars'>
                         <label id="star">
                             <input type="radio" value="1" name="rating"
                             onMouseOver={() => { hover = 1 }} onMouseOut={(e) => { hover = 0 }} 
-                            onClick={this.handleRating()} />
+                            onClick={this.handleRating} />
                             {<FaStar key='1' size={30} 
                             color={(hover || this.state.rating) >= 1 ? 'gold' : 'gray'} />}
                             </label>
                         <label id="star">
                             <input type="radio" value="2" name="rating"
                             // onMouseOver={() => { hover = 2 }} onMouseOut={() => { hover = 0 }} 
-                            onClick={this.handleRating()} />
+                            onClick={this.handleRating} />
                             {<FaStar key='2' size={30} 
                             color={(hover || this.state.rating) >= 2 ? 'gold' : 'gray'} />}
                             </label>
                         <label id="star">
                             <input type="radio" value="3" name="rating"
                             // onMouseOver={() => { hover = 3 }} onMouseOut={() => { hover = 0 }} 
-                            onClick={this.handleRating()} />
+                            onClick={this.handleRating} />
                             {<FaStar key='3' size={30} 
                             color={(hover || this.state.rating) >= 3 ? 'gold' : 'gray'} />}
                             </label>
                         <label id="star">
                             <input type="radio" value="4" name="rating"
                             // onMouseOver={() => { hover = 4 }} onMouseOut={() => { hover = 0 }} 
-                            onClick={this.handleRating()} />
+                            onClick={this.handleRating} />
                             {<FaStar key='4' size={30} 
                             color={(hover || this.state.rating) >= 4 ? 'gold' : 'gray'} />}
                             </label>
                         <label id="star">
                             <input type="radio" value="5" name="rating"
                             // onMouseOver={() => { hover = 5 }} onMouseOut={() => { hover = 0 }} 
-                            onClick={this.handleRating()} />
+                            onClick={this.handleRating} />
                             {<FaStar key='5' size={30} 
                             color={(hover || this.state.rating) >= 5 ? 'gold' : 'gray'} />}
                         </label>

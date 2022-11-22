@@ -8,18 +8,19 @@ import { createReview } from '../../actions/review_actions';
 const mapStateToProps = (state, ownProps) => ({
     review: {
         user_id: state.session.id,
-        trail_id: parseInt(ownProps.match.params.trailId),
+        trail_id: parseInt(ownProps.location.pathname.split("/")[2]),
         rating: 0,
         description: '',
         trail_date: ''
     },
-    trail: state.entities.trails[ownProps.match.params.trailId],
-    trailId: parseInt(ownProps.match.params.trailId),
-    formType: state.ui.modal.Type,
-    user: state.session.currrntUser
+    trail: state.entities.trails[ownProps.location.pathname.split("/")[2]],
+    trailId: parseInt(ownProps.location.pathname.split("/")[2]),
+    type: state.ui.modal.type,
+    user: state.session.currrentUser
 })
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = dispatch => (
+    {
     fetchTrail: (trailId) => dispatch(fetchTrail(trailId)),
     closeModal: () => dispatch(closeModal()),
     createReview: (review) => dispatch(createReview(review))

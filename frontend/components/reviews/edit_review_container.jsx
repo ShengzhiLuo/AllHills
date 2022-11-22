@@ -10,7 +10,7 @@ const mapStateToProps = (state, ownProps) => {
         {
             review: ownProps.review,
             trail: state.entities.trails[ownProps.match.params.trailId],
-            formType: 'edit'
+            type: 'edit'
         }
     )
 }

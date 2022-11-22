@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import reviewAverage from '../reviews/avg_review';
+import {allReviewsAvg} from '../reviews/star';
 
 
 const TrailModule = ({ trail }) => {
@@ -15,7 +15,9 @@ const TrailModule = ({ trail }) => {
                 <p>park</p>
                 <div id='flex'>
                     <div className='difficulty' id={trail.difficulty_level}>{trail.difficulty_level}</div>
-                    <div id="star">{trail.reviews ? reviewAverage(trail.reviews, 'Module') : ""}</div>
+                    <div className='trail-stars'>
+                                {allReviewsAvg(trail.rating)}
+                    </div>
                 </div>
                 <div id='lower-info'>
                     <div>Length: {trail.length} km • {trail.estimated_time}</div>
