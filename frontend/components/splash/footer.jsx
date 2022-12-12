@@ -9,9 +9,9 @@ const Footer = () => {
       <div className='footer'>
           <div className='footer-icons'>
                 <div className='foot-left'>
-                    <p>An app for the outdoors</p>
+                    {/* <p id = "foot-words">An app for the outdoors</p>
                     <img src={window.app_store} width="105px" height="35px" />
-                    <img src={window.google_store} width="118px" height="34px" />
+                    <img src={window.google_store} width="118px" height="34px" /> */}
                 </div>
                 <div className="foot-right">
                   <p>Connect with Shengzhi Luo</p>

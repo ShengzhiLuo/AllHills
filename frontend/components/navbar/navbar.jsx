@@ -22,8 +22,9 @@ class Navbar extends React.Component {
   }
 
   userNav(){
-    return(
-    (this.props.currentUser ? (
+    return (
+      
+      (this.props.currentUser ? (
       <div id='user-nav'>
         <button id='log-out' onClick={this.props.logout}>Log Out</button>
       </div>
